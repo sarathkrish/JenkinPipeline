@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Init') {
             steps {
-                sh 'sudo yum -y install docker'
+                sh 'yum -y install docker'
             }
         }
     }
