@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Init') {
             steps {
-                sh 'whoami'
+                sh 'yum -y install docker'
             }
         }
     }
