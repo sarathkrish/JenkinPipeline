@@ -1,11 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('Install') {
+        stage('Init') {
             steps {
-                sudo yum -y install docker
+                sh 'sudo yum -y install docker'
             }
         }
     }
-    
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+    }
 }
